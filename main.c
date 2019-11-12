@@ -13,15 +13,25 @@ void elso_100_osszeg()
 
 int in_pos_int()
 {
-    int in=0;
+    char str[16];
+    char *ptr;
+    long num;
 
-    printf("Pozitiv egesz szam: ");
-    while ((scanf("%d",&in) != 1) || (in<0))
+    do
     {
         printf("Pozitiv egesz szam: ");
-        scanf("%*s");
+        //fgets(str, 16, stdin);
+        scanf("%s", &str);
+        num = strtol(str, &ptr, 10);
+        printf("\t***** DEBUG *****\n");
+        printf("\tA megadott szam                %d\n", num);
+        printf("\tString resz:                  |%s|\n", ptr);
+        printf("\tASCII kodja az elso stringnek: %d\n", *ptr);
     }
-    return in;
+    //while (*ptr!=10); // fgets ASCII LF / NEW LINE
+    while ((*ptr!=0) || (num<0)); // scanf ASCII LF / NEW LINE
+
+    return num;
 }
 
 void in_char(int n)

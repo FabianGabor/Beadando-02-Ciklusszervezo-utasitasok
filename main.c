@@ -13,13 +13,14 @@ void elso_100_osszeg()
 
 int in_pos_int()
 {
-    int in;
-    do
+    int in=0;
+
+    printf("Pozitiv egesz szam: ");
+    while ((scanf("%d",&in) != 1) || (in<0))
     {
         printf("Pozitiv egesz szam: ");
-        scanf("%d", &in);
+        scanf("%*s");
     }
-    while (in<0);
     return in;
 }
 
@@ -57,17 +58,17 @@ void kamat()
 int main()
 {
     // 1. Írassuk ki az első 100 pozitív egész számot, majd írassuk ki azok összegét!
-    elso_100_osszeg();
+    //elso_100_osszeg();
 
     // 2. Kérjünk be egy pozitív számot! Rossz adat esetében ismételjük meg a beolvasást!
-    //in_pos_int();
+    in_pos_int();
 
     // 3. Folytatás: olvassunk be egy karaktert is, majd írassuk ki annyiszor, mint a beolvasott szám!
     //in_char(in_pos_int());
 
     // 4. Készíts programot kamatszámításhoz, ciklussal! Kérd be a tőke mennyiségét, a kamat éves értékét (%), illetve a befektetés idejét hónapokban!
     //    Írd ki hónapról hónapra, hogyan gyarapodik a befektetés!
-    kamat();
+    //kamat();
 
     return 0;
 }

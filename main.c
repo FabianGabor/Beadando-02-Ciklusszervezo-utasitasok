@@ -1,3 +1,7 @@
+/*
+ * https://github.com/FabianGabor/Beadando-02-Ciklusszervezo-utasitasok
+ */
+
 #include <stdio.h>
 
 void elso_100_osszeg()
